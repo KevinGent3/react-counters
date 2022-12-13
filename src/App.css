@@ -1,38 +1,94 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  justify-content: center;
   display: flex;
+  align-items: center;
+  height: 100vh;
+}
+.counters-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+  width: 500px;
+  height: 500px;
+}
+.map-container {
+  display: flex;
+}
+
+.counter-container {
+  display: flex;
+  margin-right: 20px;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+}
+.counter-buttons {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.counter-buttons p {
+  background-color: orange;
+  border-radius: 5px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.counter-buttons button {
+  border: none;
+  background-color: white;
+}
+.counter-buttons button,
+p {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+}
+.reset-button button {
+  width: 94px;
+  height: 39px;
+  border-radius: 4px;
+  border: none;
+  background-color: orange;
+  font-size: 22px;
+}
+.add-button button {
+  width: 130px;
+  height: 39px;
+  border-radius: 4px;
+  border: none;
+  background-color: orange;
+  font-size: 18px;
+  margin-right: 25px;
+}
+@media (max-width: 1300px) {
+  .App {
   }
-  to {
-    transform: rotate(360deg);
+  .counter-container {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media (max-width: 1100px) {
+  .App {
+    margin: 20px auto;
+  }
+  .map-container {
+    display: flex;
+
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  .App {
+    margin: 50px auto;
+  }
+  .map-container {
+    display: flex;
+
+    flex-direction: column;
   }
 }
